@@ -4,7 +4,7 @@ import (
 	"sort"
 	"time"
 
-	GetTransaction "github.com/YahirKeym/transactions/src/internal/transaction/get"
+	GetTransaction "github.com/YahirKeym/transactions/internal/transaction/get"
 )
 
 type SummaryTransaction struct {

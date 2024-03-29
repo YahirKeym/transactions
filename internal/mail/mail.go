@@ -7,7 +7,7 @@ import (
 	"net/smtp"
 	"os"
 
-	ST "github.com/YahirKeym/transactions/src/internal/transaction/summarize"
+	ST "github.com/YahirKeym/transactions/internal/transaction/summarize"
 )
 
 type Email struct {
@@ -19,7 +19,7 @@ func Send(summaryTransaction ST.SummaryTransaction, email Email) error {
 	port := os.Getenv("SMTP_PORT")
 	from := os.Getenv("SMTP_USERNAME")
 	password := os.Getenv("SMTP_PASSWORD")
-	template, err := loadTemplate("src/internal/mail/template.html")
+	template, err := loadTemplate("internal/mail/template.html")
 	if err != nil {
 		return err
 	}
@@ -28,7 +28,7 @@ func Send(summaryTransaction ST.SummaryTransaction, email Email) error {
 		return err
 	}
 	to := email.To
-	message := buildEmailMessage(from, to, "STORI - Account Status", body)
+	message := buildEmailMessage(from, to, "STORI - Account Status - Yahir Keymurth", body)
 
 	err = smtp.SendMail(host+":"+port,
 		smtp.PlainAuth("", from, password, host),

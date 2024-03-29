@@ -3,7 +3,7 @@ package SaveTransaction
 import (
 	"database/sql"
 
-	GetTransaction "github.com/YahirKeym/transactions/src/internal/transaction/get"
+	GetTransaction "github.com/YahirKeym/transactions/internal/transaction/get"
 
 	"github.com/google/uuid"
 )

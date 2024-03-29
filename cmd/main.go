@@ -3,11 +3,11 @@ package main
 import (
 	"log"
 
-	Mail "github.com/YahirKeym/transactions/src/internal/mail"
-	GetTransaction "github.com/YahirKeym/transactions/src/internal/transaction/get"
-	SaveTransaction "github.com/YahirKeym/transactions/src/internal/transaction/save"
-	SummarizeTransaction "github.com/YahirKeym/transactions/src/internal/transaction/summarize"
-	Database "github.com/YahirKeym/transactions/src/pkg/database"
+	Mail "github.com/YahirKeym/transactions/internal/mail"
+	GetTransaction "github.com/YahirKeym/transactions/internal/transaction/get"
+	SaveTransaction "github.com/YahirKeym/transactions/internal/transaction/save"
+	SummarizeTransaction "github.com/YahirKeym/transactions/internal/transaction/summarize"
+	Database "github.com/YahirKeym/transactions/pkg/database"
 
 	"github.com/joho/godotenv"
 )

@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	ConstantsTransactions "github.com/YahirKeym/transactions/src/internal/transaction"
+	ConstantsTransactions "github.com/YahirKeym/transactions/internal/transaction"
 )
 
 type Transaction struct {
