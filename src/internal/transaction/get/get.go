@@ -4,10 +4,11 @@ import (
 	"encoding/csv"
 	"io"
 	"io/ioutil"
-	ConstantsTransactions "stori/src/internal/transaction"
 	"strconv"
 	"strings"
 	"time"
+
+	ConstantsTransactions "github.com/YahirKeym/transactions/src/internal/transaction"
 )
 
 type Transaction struct {

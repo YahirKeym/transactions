@@ -1,4 +1,4 @@
-module stori
+module github.com/YahirKeym/transactions
 
 go 1.18
 
