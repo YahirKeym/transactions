@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-color: #fff;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		.logo {
+			max-width: 150px;
+			display: block;
+			margin: 0 auto;
+		}
+
+		table {
+			border-collapse: collapse;
+			border: 1px solid #ddd;
+			margin: 20px auto;
+		}
+
+		th {
+			padding: 10px;
+			border-bottom: 1px solid #ddd;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		td {
+			padding: 10px;
+			border-bottom: 1px solid #ddd;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Stori_Logo_2023.svg/220px-Stori_Logo_2023.svg.png" alt="Stori Logo">
+		<table>
+			<thead>
+				<tr>
+					<th>Month</th>
+					<th>Total Transactions</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{ range $index, $monthSummary := .SortMonths }}
+					<tr>
+						<td>{{ $monthSummary }}</td>
+						<td>{{ index $.TransactionsByMonth $monthSummary }}</td>
+					</tr>
+				{{end}}
+			</tbody>
+		</table>
+		<table>
+			<thead>
+				<tr>
+					<th>Total Balance</th>
+					<th>Credit Transactions</th>
+					<th>Debit Transactions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>${{ $.Balance }}</td>
+					<td>{{ $.CreditTransactions }}</td>
+					<td>{{ $.DebitTransactions }}</td>
+			</tbody>
+		</table>
+		<footer>
+			<p>Stori - 2023</p>
+			<p>You can review my code in the next link: <a href="https://github.com/YahirKeym/transactions.git" target="_blank">Transactions Stori</a></p>
+		</footer>
+	</div>
+</body>
+</html>
